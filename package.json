@@ -8,8 +8,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types",
     "start:gateway": "node apps/api-gateway/dist/main.js",
-  "start:products": "node apps/product-service/dist/main.js",
-  "start:cart": "node apps/cart-service/dist/main.js"
+    "start:products": "node apps/product-service/dist/main.js",
+    "start:cart": "node apps/cart-service/dist/main.js"
   },
   "devDependencies": {
     "prettier": "^3.7.4",
@@ -27,6 +27,7 @@
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "@nestjs/axios": "^4.0.1",
+    "@nestjs/config": "^4.0.3",
     "@nykaa-monorepo/types": "workspace:*",
     "@tailwindcss/postcss": "^4.2.2",
     "@tailwindcss/vite": "^4.2.2",
