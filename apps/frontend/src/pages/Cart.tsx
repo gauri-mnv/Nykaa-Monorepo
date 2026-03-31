@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { useEffect, useState } from 'react';
-import '../App.css'; // Apni CSS file import karo
+import '../App.css'; 
+
 
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<any[]>([]);

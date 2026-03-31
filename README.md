@@ -89,10 +89,10 @@ npx turbo run dev
 
 **Access the services at:**
 
-  - **Frontend:** `http://localhost:5173`
-  - **API Gateway:** `http://localhost:3000`
-  - **Product Service:** `http://localhost:3001`
-  - **Cart Service:** `http://localhost:3002`
+  - **Frontend:** `http://localhost:5173`,`https://nykaa-frontend-pu8y.onrender.com/`
+  - **API Gateway:** `http://localhost:3000`,`https://nykaa-gateway.onrender.com/products`
+  - **Product Service:** `http://localhost:3001`,`https://nykaa-product-service.onrender.com/all-products`
+  - **Cart Service:** `http://localhost:3002`,`https://nykaa-frontend-pu8y.onrender.com/cart`
 
 ### Approach and Design
 
