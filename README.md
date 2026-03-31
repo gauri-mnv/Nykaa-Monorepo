@@ -124,6 +124,8 @@ Questions, suggestions, or want to collaborate?
 
 This Turborepo starter is maintained by the Turborepo core team.
 
+https://i.ibb.co/zWygtrvC/Screenshot-from-2026-03-31-18-30-07.png
+
 
  npx turbo run dev --filter=api-gateway --filter=product-service --filter=cart-service
 
