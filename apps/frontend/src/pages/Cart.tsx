@@ -13,7 +13,7 @@ export default function CartPage() {
     if (!confirmClear) return;
 
     try {
-      const response = await fetch(`http://localhost:3002/cart/clear/${userId}`, {
+      const response = await fetch(`https://nykaa-cart-service.onrender.com/cart/clear/${userId}`, {
         method: 'DELETE',
       });
 
@@ -30,7 +30,7 @@ const updateQty = async (productId: number, action: 'inc' | 'dec', currentQty: n
   if (action === 'dec' && currentQty <= 1) return;
 
   try {
-    const response = await fetch(`http://localhost:3002/cart/update/${userId}/${productId}`, {
+    const response = await fetch(`https://nykaa-cart-service.onrender.com/cart/update/${userId}/${productId}`, {
 
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
@@ -46,7 +46,7 @@ const updateQty = async (productId: number, action: 'inc' | 'dec', currentQty: n
   }
 };
   useEffect(() => {
-    fetch(`http://localhost:3002/cart/${userId}`)
+    fetch(`https://nykaa-cart-service.onrender.com/cart/${userId}`)
       .then(res => res.json())
       .then(data => setCartItems(data.items || []));
   }, []);

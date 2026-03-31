@@ -5,15 +5,18 @@ import { Product } from '@nykaa-monorepo/types';
 
 @Injectable()
 export class AppService {
-  private readonly PRODUCT_URL = 'http://localhost:3001/all-products';
-  private readonly CART_URL = 'http://localhost:3002/cart';
+  // private readonly PRODUCT_URL = 'http://localhost:3001/all-products';
+  // private readonly CART_URL = 'http://localhost:3002/cart';
+
+  private readonly PRODUCT_URL = 'https://nykaa-product-service.onrender.com/all-products/all-products';
+ private readonly CART_URL = 'https://nykaa-cart-service.onrender.com/cart';
 
   async getProductsFromOtherService(): Promise<Record<string, Product[]>> {
     const response = await axios.get(this.PRODUCT_URL);
 
-    console.log(
-      `go to http://localhost:3001/all-products to see the products from Product Service`,
-    );
+    // console.log(
+    //   `go to https://nykaa-product-service.onrender.com/all-products/all-products to see the products from Product Service`,
+    // );
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const allProducts: Product[] = response.data;

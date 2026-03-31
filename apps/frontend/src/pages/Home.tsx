@@ -6,7 +6,7 @@ const Home = () => {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
-    fetch('http://localhost:3000/products')
+    fetch('https://nykaa-gateway.onrender.com/products')
       .then((res) => res.json())
       .then((json) => setData(json));
   }, []);

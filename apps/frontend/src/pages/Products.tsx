@@ -11,7 +11,7 @@ export default function ProductsPage() {
   const userId = "user123";
 
   useEffect(() => {
-    fetch('http://localhost:3001/all-products')
+    fetch('https://nykaa-product-service.onrender.com/all-products')
       .then(res => res.json())
       .then(data => setProducts(data.products || data));
 
@@ -19,7 +19,7 @@ export default function ProductsPage() {
 
   const addToCart = async (product: Product) => {
     try {
-      const response = await fetch(`http://localhost:3002/cart/add/${userId}`, {
+      const response = await fetch(`https://nykaa-cart-service.onrender.com/cart/add/${userId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
