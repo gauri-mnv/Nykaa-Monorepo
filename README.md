@@ -1,9 +1,3 @@
-Arre waah\! Ab lag raha hai na ki poora full-stack project taiyaar ho raha hai. Ek achha README kisi bhi project ki "Shaan" hota hai.
-
-Maine tumhare **MiniNykaa (Nykaa-inspired Monorepo)** ke liye ek ekdum mast README likh diya hai. Isme Backend (NestJS Microservices) aur Frontend dono ka zikr hai.
-
------
-
 # MiniNykaa 💄✨
 
 ### Overview
@@ -45,7 +39,7 @@ The application is structured as a monorepo to ensure seamless coordination betw
      ![Alt Text](https://i.ibb.co/ym8HfBGF/Screenshot-from-2026-03-31-14-50-35.png)
      ---
 
-     
+
 
 
 
