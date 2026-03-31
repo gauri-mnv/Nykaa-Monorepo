@@ -20,13 +20,14 @@ const Home = () => {
           <p>A spectacular assortment of minimal yet alluring styles.</p>
           <button className="explore-btn">EXPLORE MORE</button>
         </div>
+        <img src="https://images-static.nykaa.com/uploads/c6616438-0dac-4cf2-b747-60ab0f13b1da.gif" alt="Wellness _Brand_days_flashsale_31th March 2-6pm" loading="eager" style={{ height: '90%' }} />
         <img 
           src="https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp" 
           alt="Luxury Makeup" 
           style={{ height: '90%' }}
         />
       </header>
-
+  
       {/* Categories */}
       <main className="container home-container">
         {data && Object.keys(data).map((category) => (
