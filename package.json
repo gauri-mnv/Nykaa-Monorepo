@@ -7,7 +7,6 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check-types": "turbo run check-types"
-
   },
   "devDependencies": {
     "prettier": "^3.7.4",
@@ -23,7 +22,13 @@
     "packages/*"
   ],
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@nestjs/axios": "^4.0.1",
-    "axios": "^1.14.0","@nykaa-monorepo/types": "workspace:*"
+    "@nykaa-monorepo/types": "workspace:*",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/vite": "^4.2.2",
+    "axios": "^1.14.0",
+    "react-router-dom": "^7.13.2",
+    "tailwindcss": "^4.2.2"
   }
 }

@@ -13,7 +13,7 @@ export class ProductService {
       this.httpService.get('https://dummyjson.com/products'),
     );
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    console.log('🚀Products:', data.products);
+    //console.log('🚀Products:', data.products);
     // eslint-disable-next-line @typescript-eslint/no-unsafe-return, @typescript-eslint/no-unsafe-member-access
     return data.products;
   }

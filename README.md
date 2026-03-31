@@ -4,6 +4,8 @@ This Turborepo starter is maintained by the Turborepo core team.
 
 
  npx turbo run dev --filter=api-gateway --filter=product-service --filter=cart-service
+
+ npx turbo run dev --filter=frontend --filter=api-gateway --filter=product-service --filter=cart-service
 ## Using this example
 
 Run the following command:
