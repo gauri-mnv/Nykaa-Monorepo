@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useMemo } from 'react';
 import type { Product } from '@nykaa-monorepo/types';
 import '../App.css'; 
@@ -7,6 +8,7 @@ export default function ProductsPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('popularity');
+  const userId = "user123";
 
   useEffect(() => {
     fetch('http://localhost:3001/all-products')
@@ -15,6 +17,32 @@ export default function ProductsPage() {
 
   }, []);
 
+  const addToCart = async (product: Product) => {
+    try {
+      const response = await fetch(`http://localhost:3002/cart/add/${userId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          productId: product.id,
+          title: product.title,
+          price: product.price,
+          thumbnail: product.thumbnail,
+          category: product.category,
+          quantity: 1, 
+        }),
+      });
+      if (response.ok) {
+        alert(`${product.title} added to cart! ✅`);
+      } else {
+        alert("Something went wrong! ❌");
+      }
+    } catch (error) {
+      console.error("Cart error:", error);
+      alert("Lost connection to cart 🔌");
+    }
+  };
   const filteredProducts = useMemo(() => {
     let result = [...products];
     // console.log('Filtering products with:', result,{ searchTerm, selectedCategory, sortBy });
@@ -89,7 +117,7 @@ export default function ProductsPage() {
                 </div>
                 <p style={{fontSize: '12px', color: '#f1c40f', marginTop: '5px'}}>★ {product.rating}</p>
               </div>
-              <button className="add-to-bag-btn">ADD TO BAG</button>
+              <button className="add-to-bag-btn" onClick={() => addToCart(product)}>ADD TO BAG</button>
             </div>
           ))}
         </div>

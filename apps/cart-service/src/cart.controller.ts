@@ -1,4 +1,12 @@
-import { Controller, Post, Get, Body, Param } from '@nestjs/common';
+import {
+  Controller,
+  Post,
+  Get,
+  Body,
+  Param,
+  Delete,
+  Patch,
+} from '@nestjs/common';
 import { CartService } from './cart.service';
 
 @Controller('cart')
@@ -13,5 +21,21 @@ export class CartController {
   @Get(':userId')
   getCart(@Param('userId') userId: string) {
     return this.cartService.getCart(userId);
+  }
+
+  @Delete('clear/:userId')
+  // Endpoint: DELETE http://localhost:3002/cart/clear/user123
+  clearCart(@Param('userId') userId: string) {
+    this.cartService.clearCart(userId);
+    return { message: 'Bag khali ho gaya! 🧹' };
+  }
+
+  @Patch('update/:userId/:productId')
+  updateQuantity(
+    @Param('userId') userId: string,
+    @Param('productId') productId: number,
+    @Body('action') action: 'inc' | 'dec',
+  ) {
+    return this.cartService.updateQuantity(userId, productId, action);
   }
 }

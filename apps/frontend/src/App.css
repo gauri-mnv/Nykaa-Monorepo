@@ -495,3 +495,9 @@ body {
   width: 24px;
   height: 24px;
 }
+
+.clear-bag-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px; /* Thoda gap dene ke liye */
+}
